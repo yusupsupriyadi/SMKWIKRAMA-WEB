@@ -13,7 +13,7 @@
                     <input type="hidden" wire:model="postId">
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input class="form-control border-2 @error('gambar') is-invalid @enderror" type="text" wire:model="gambar" placeholder="Gambar">
+                        <input class="form-control border-2 @error('gambar') is-invalid @enderror" type="file" wire:model="gambar" placeholder="Gambar">
                         @error('gambar')
                         <span class="error text-red-600">{{ $message }}</span>
                         @enderror

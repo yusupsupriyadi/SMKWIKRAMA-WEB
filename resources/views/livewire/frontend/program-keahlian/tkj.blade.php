@@ -1,5 +1,5 @@
 <div>
-  <section class="p-2 pt-md-5 p-md-5 text-center " style="background-color: #FF5500">
+  <section class="pt-32 pb-2 px-4 text-center " style="background-color: #FF5500">
     <h1 class="mb-3 font-bold text-white">Teknik Komputer dan Jaringan</h1>
     <h5 class="mb-3 text-white px-md-5 px-0">Peserta didik mampu menjadi seorang teknisi jaringan, administrasi jaringan, network engineer dan menguasai komunikasi.Menginstalasi perangkat komputer personal, menginstal sistem operasi dan aplikasi. </h5>
     <a class="rounded-xl py-2 px-4 bg-blue-600 text-white font-bold" href="https://ppdb.smkwikrama.sch.id" role="button">Daftar</a>

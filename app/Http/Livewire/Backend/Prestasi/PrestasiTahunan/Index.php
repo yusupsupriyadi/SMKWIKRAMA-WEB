@@ -19,7 +19,7 @@ class Index extends Component
         $post = Prestasitahunan::find($id);
         $post->delete();
         session()->flash('success', 'Data Berhasil Dihapus');
-        return redirect()->route('prestasi.index');
+        return redirect()->route('prestasi-tahunan.index');
     }
 
     public function render()

@@ -31,7 +31,13 @@
                         <tbody>
                             @foreach ($posts as $post)
                                 <tr>
-                                    <td>{{ $post->gambar }}</td>
+                                    <td>
+                                        @if (!empty($post->gambar))
+                                            <img width="100px" src="{{ url('storage/photo/'. $post->gambar) }}">
+                                        @else
+                                            Tidak ada gambar
+                                        @endif
+                                    </td>
                                     <td>{{ $post->judul }}</td>
                                     <td>{{ $post->content }}</td>
                                     <td>

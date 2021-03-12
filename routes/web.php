@@ -107,4 +107,36 @@ Route::group(['middleware' => 'auth'], function () {
     Route::livewire('/testimoniperusahaan', 'backend.testimoni.testimoniperusahaan.index')->layout('layouts.app')->name('testimoniperusahaan.index');
     Route::livewire('/testimoniperusahaan/create', 'backend.testimoni.testimoniperusahaan.create')->layout('layouts.app')->name('testimoniperusahaan.create');
     Route::livewire('/testimoniperusahaan/edit/{id}', 'backend.testimoni.testimoniperusahaan.edit')->layout('layouts.app')->name('testimoniperusahaan.edit');
+
+    Route::livewire('/jurusan/bdp', 'backend.jurusan.bdp.index')->layout('layouts.app')->name('bdp.index');
+    Route::livewire('/jurusan/bdp/create', 'backend.jurusan.bdp.create')->layout('layouts.app')->name('bdp.create');
+    Route::livewire('/jurusan/bdp/edit/{id}', 'backend.jurusan.bdp.edit')->layout('layouts.app')->name('bdp.edit');
+
+    Route::livewire('/jurusan/general', 'backend.jurusan.general.index')->layout('layouts.app')->name('general.index');
+    Route::livewire('/jurusan/general/create', 'backend.jurusan.general.create')->layout('layouts.app')->name('general.create');
+    Route::livewire('/jurusan/general/edit/{id}', 'backend.jurusan.general.edit')->layout('layouts.app')->name('general.edit');
+    
+    Route::livewire('/jurusan/mmd', 'backend.jurusan.mmd.index')->layout('layouts.app')->name('mmd.index');
+    Route::livewire('/jurusan/mmd/create', 'backend.jurusan.mmd.create')->layout('layouts.app')->name('mmd.create');
+    Route::livewire('/jurusan/mmd/edit/{id}', 'backend.jurusan.mmd.edit')->layout('layouts.app')->name('mmd.edit');
+
+    Route::livewire('/jurusan/otkp', 'backend.jurusan.otkp.index')->layout('layouts.app')->name('otkp.index');
+    Route::livewire('/jurusan/otkp/create', 'backend.jurusan.otkp.create')->layout('layouts.app')->name('otkp.create');
+    Route::livewire('/jurusan/otkp/edit/{id}', 'backend.jurusan.otkp.edit')->layout('layouts.app')->name('otkp.edit');
+    
+    Route::livewire('/jurusan/hotel', 'backend.jurusan.hotel.index')->layout('layouts.app')->name('hotel.index');
+    Route::livewire('/jurusan/hotel/create', 'backend.jurusan.hotel.create')->layout('layouts.app')->name('hotel.create');
+    Route::livewire('/jurusan/hotel/edit/{id}', 'backend.jurusan.hotel.edit')->layout('layouts.app')->name('hotel.edit');
+
+    Route::livewire('/jurusan/rpl', 'backend.jurusan.rpl.index')->layout('layouts.app')->name('rpl.index');
+    Route::livewire('/jurusan/rpl/create', 'backend.jurusan.rpl.create')->layout('layouts.app')->name('rpl.create');
+    Route::livewire('/jurusan/rpl/edit/{id}', 'backend.jurusan.rpl.edit')->layout('layouts.app')->name('rpl.edit');
+
+    Route::livewire('/jurusan/tbg', 'backend.jurusan.tbg.index')->layout('layouts.app')->name('tbg.index');
+    Route::livewire('/jurusan/tbg/create', 'backend.jurusan.tbg.create')->layout('layouts.app')->name('tbg.create');
+    Route::livewire('/jurusan/tbg/edit/{id}', 'backend.jurusan.tbg.edit')->layout('layouts.app')->name('tbg.edit');
+
+    Route::livewire('/jurusan/tkj', 'backend.jurusan.tkj.index')->layout('layouts.app')->name('tkj.index');
+    Route::livewire('/jurusan/tkj/create', 'backend.jurusan.tkj.create')->layout('layouts.app')->name('tkj.create');
+    Route::livewire('/jurusan/tkj/edit/{id}', 'backend.jurusan.tkj.edit')->layout('layouts.app')->name('tkj.edit');
 });

@@ -21,7 +21,6 @@ class Create extends Component
             'email' => 'required',
             'website' => 'required',
             'no_telp' => 'required',
-            'gambar' => 'image|max:1024'
         ]);
 
         $post = SchoolAlliance::create([
@@ -35,7 +34,7 @@ class Create extends Component
             'no_telp' => $this->no_telp,
             'gambar' => $this->gambar,
         ]);
-        $this->photo->store('public');
+        
         session()->flash('success', 'Data Berhasil Di Simpan');
         return redirect()->route('schoolalliance.index');
     }

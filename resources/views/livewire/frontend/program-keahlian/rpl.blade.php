@@ -1,5 +1,5 @@
 <div>
-  <section class="p-2 pt-md-5 p-md-5 text-center " style="background-color: #0099FF">
+  <section class="pt-32 pb-2 px-4 text-center " style="background-color: #0099FF">
     <h1 class="mb-3 font-bold text-white">Rekayasa Perangkat Lunak</h1>
     <h5 class="mb-3 text-white px-md-5 px-0">Merancang solusi perangkat lunak berbasis web, desktop dan mobile dalam berbagai skala kompleksitas yang mengintegrasikan persoalan ethical, social, legal, security dan ekonomi.</h5>
     <a class="rounded-xl py-2 px-4 bg-blue-600 text-white font-bold" href="https://ppdb.smkwikrama.sch.id" role="button">Daftar</a>

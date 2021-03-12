@@ -24,8 +24,6 @@
             }
         }
 
-    </style>
-    <style>
         .jurusan {
             background-color: #0099ff;
         }
@@ -44,7 +42,8 @@
 </head>
 
 <body>
-    <nav class="shadow navbar navbar-expand-lg navbar-light bg-light">
+    <div id="home"></div>
+    <nav class="shadow navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('logo/wikrama.png') }}" alt="" width="30" height="24"
@@ -55,10 +54,10 @@
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+            <div class="collapse navbar-collapse text-md text-bold" id="navbarNavDropdown">
                 <ul class="ml-auto navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -193,12 +192,16 @@
             </div>
         </div>
     </nav>
-    
+    <div>
         @yield('content')
-
+    </div>
     <!-- Footer -->
     <footer class="jurusan text-center text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L60,154.7C120,181,240,235,360,256C480,277,600,267,720,229.3C840,192,960,128,1080,117.3C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,128L60,154.7C120,181,240,235,360,256C480,277,600,267,720,229.3C840,192,960,128,1080,117.3C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+            </path>
+        </svg>
         <div class="container p-4">
             <!-- Section: Social media -->
             <section class="mb-4">
@@ -217,42 +220,7 @@
                 <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
                     role="button"><i class="fab fa-linkedin-in"></i></a>
             </section>
-            <!-- Section: Form -->
-            <section class="">
-                <form action="">
-                    <!--Grid row-->
-                    <div class="row d-flex justify-content-center">
-                        <!--Grid column-->
-                        <div class="col-auto">
-                            <p class="pt-2">
-                                <strong>WIKRAMA INFO</strong>
-                            </p>
-                        </div>
-                        <!--Grid column-->
 
-                        <!--Grid column-->
-                        <div class="col-md-5 col-12">
-                            <!-- Email input -->
-                            <div class="form-outline form-white mb-4">
-                                <input type="email" id="form5Example2" class="form-control" />
-                                <label class="form-label" for="form5Example2">Email address</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-auto">
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-outline-light mb-4">
-                                Subscribe
-                            </button>
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                </form>
-            </section>
-            <!-- Section: Form -->
             <!-- Grid container -->
             <!--Grid row-->
             <div class="row">
@@ -322,21 +290,22 @@
                 </div>
                 <!--Grid column-->
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-start mb-0">Pesan</h5>
+                    <h5 class="text-start mb-3">Pesan</h5>
 
                     <ul class="list-unstyled text-start">
-                        <li class="pt-2">
-                            <input class="text-dark px-2 rounded-lg" placeholder="Nama"/>
-                        </li>
-                        <li class="pt-2">
-                            <input class="text-dark px-2 rounded-lg" placeholder="Email"/>
-                        </li>
-                        <li class="pt-2">
-                            <textarea class="text-dark rounded-lg" placeholder="Isi pesan"></textarea>
-                        </li>
-                        <li class="pt-1">
-                          <button class="py-1 px-2 rounded-lg text-sm bg-yellow-600 text-white font-bold">Kirim</button>
-                        </li>
+                        <form>
+                            <div class="mb-1">
+                                <input type="text" class="form-control text-sm" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Name">
+                            </div>
+                            <div class="mb-1">
+                                <input type="email" class="form-control text-sm" id="exampleInputPassword1" placeholder="Email">
+                            </div>
+                            <div class="mb-1">
+                                <textarea type="text" class="form-control text-sm" id="exampleInputPassword1" placeholder="Pesan"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
+                        </form>
                     </ul>
                 </div>
                 <!--Grid column-->
@@ -348,15 +317,11 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2020 Copyright:
-            <a class="text-white" href="#">SMK Wikrama</a>
+            <a class="text-white" href="#">SMK Wikrama Bogor</a>
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.15.5/sweetalert2.js"
-        integrity="sha512-gaB3VkYNBXGPjf1TuyPJahwm3KTl2q1PuF7b7k/ncNh8/QodlcPtya+YbjmxDo+bAy6dZTWW5ZW6tS1NQLxqXw=="
-        crossorigin="anonymous"></script>
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>

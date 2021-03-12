@@ -74,7 +74,7 @@
             <a href="{{ route('backend.dashboard.index') }}" class="nav-link active">
               <i class="fas fa-tachometer-alt"></i>
               <p>
-                Dashboar
+                Dashboard
               </p>
             </a>
           </li>
@@ -159,6 +159,59 @@
                 </a>
               </li>
             </ul>
+            <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-trophy"></i>
+              <p>
+                Program Keahlian
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('otkp.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>OTKP</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('rpl.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>RPL</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('tkj.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TKJ</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('bdp.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>BDP</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('mmd.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Multimedia</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('tbg.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tata Boga</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('hotel.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Perhotelan</p>
+                </a>
+              </li>
+            </ul>
+          </li>
             <li class="nav-header">MORE</li>
           <li class="nav-item">
             <a href="{{ route('berita.index') }}" class="nav-link">
@@ -176,6 +229,7 @@
               </p>
             </a>
           </li>
+           
           </li>
         </ul>
       </nav>
