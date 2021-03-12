@@ -8,6 +8,7 @@
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <title>Laravel Livewire</title>
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
