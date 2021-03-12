@@ -1,0 +1,3 @@
+login : admin@admin.com pass: admin
+
+bila tampilan berantakan itu penyebanya saya pakai tailwin dan belum berhasil di build bila tampilan struktur itu tandanya saya berhasil build npm laravel mix(gk ada error pas build)
