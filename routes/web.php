@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::livewire('/login', 'auth.login')
-    ->layout('layouts.auth')->name('auth.login');
+Route::livewire('/login', 'auth.login')->layout('layouts.auth')->name('auth.login');
 
 Route::livewire('/', 'frontend.home')->layout('layouts.master')->name('frontend.home');
+Route::livewire('/sejarah','frontend.sejarah')->layout('layouts.master')->name('frontend.sejarah');
+Route::livewire('/lowongankerja','frontend.lowongankerja')->layout('layouts.master')->name('frontend.lowongankerja');
+route::livewire('/teaching-factory', 'frontend.teaching-factory')->layout('layouts.master')->name('frontend.teaching-factory');
 
 Route::livewire('/campus/berita', 'frontend.campus.berita')->layout('layouts.master')->name('campus.berita');
 Route::livewire('/fasilitas', 'frontend.campus.fasilitas')->layout('layouts.master')->name('campus.fasilitas');
@@ -60,8 +62,8 @@ Route::livewire('/perhotelan', 'frontend.program-keahlian.perhotelan')->layout('
 Route::livewire('/rpl', 'frontend.program-keahlian.rpl')->layout('layouts.master')->name('program-keahlian.rpl');
 Route::livewire('/tbg', 'frontend.program-keahlian.tbg')->layout('layouts.master')->name('program-keahlian.tbg');
 Route::livewire('/tkj', 'frontend.program-keahlian.tkj')->layout('layouts.master')->name('program-keahlian.tkj');
-Route::livewire('/register', 'auth.register')
-    ->layout('layouts.auth')->name('auth.register');
+
+Route::livewire('/register', 'auth.register')->layout('layouts.auth')->name('auth.register');
 
 
 Route::group(['middleware' => 'auth'], function () {

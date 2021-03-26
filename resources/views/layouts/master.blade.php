@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
-    <title>Laravel Livewire</title>
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>SMK WIKRAMA</title>
+    {{-- AOS --}}
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+    {{-- / --}}
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- CSS only -->
@@ -30,8 +32,10 @@
         }
 
     </style>
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.15.5/sweetalert2.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <livewire:styles />
@@ -43,7 +47,6 @@
 </head>
 
 <body>
-    <div id="home"></div>
     <nav class="shadow navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
@@ -66,14 +69,14 @@
                             Discover Wikrama
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item hover:text-yellow:600"
+                            {{-- <li><a class="dropdown-item hover:text-yellow:600"
                                     href="{{ route('discover-wikrama.peraturan-sekolah') }}">Peraturan Sekolah</a>
                             </li>
                             <li><a class="dropdown-item hover:text-yellow:600"
                                     href="{{ route('discover-wikrama.rencana-strategi') }}">Rencana Strategi &
                                     Prestasi</a></li>
                             <li><a class="dropdown-item hover:text-yellow:600"
-                                    href="{{ route('discover-wikrama.yayasan') }}">Yayasan</a></li>
+                                    href="{{ route('discover-wikrama.yayasan') }}">Yayasan</a></li> --}}
                             <li><a class="dropdown-item hover:text-yellow:600"
                                     href="{{ route('discover-wikrama.school-alliance') }}">Shool Alliance</a></li>
                             <li><a class="dropdown-item hover:text-yellow:600"
@@ -93,9 +96,9 @@
                             Program Keahlian
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item hover:text-yellow:600"
+                            {{-- <li><a class="dropdown-item hover:text-yellow:600"
                                     href="{{ route('program-keahlian.general') }}">Competence in General
-                                    Performance</a></li>
+                                    Performance</a></li> --}}
                             <li><a class="dropdown-item hover:text-yellow:600"
                                     href="{{ route('program-keahlian.otkp') }}">Otomatisasi & Kelola Perkantoran</a>
                             </li>
@@ -197,12 +200,8 @@
         @yield('content')
     </div>
     <!-- Footer -->
-    <footer class="jurusan text-center text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#ffffff" fill-opacity="1"
-                d="M0,128L60,154.7C120,181,240,235,360,256C480,277,600,267,720,229.3C840,192,960,128,1080,117.3C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-            </path>
-        </svg>
+    {{-- <footer class="jurusan text-center text-white">
+        
         <div class="container p-4">
             <!-- Section: Social media -->
             <section class="mb-4">
@@ -224,9 +223,9 @@
 
             <!-- Grid container -->
             <!--Grid row-->
-            <div class="row">
+            <div class="row ">
                 <!--Grid column-->
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <div class="col-md mb-4 mb-md-0">
                     <div class="text-start pb-4">
                         <img src="{{ asset('logo/wikrama.png') }}" alt="" width="30" height="24"
                             class="align-center d-inline-block">
@@ -247,32 +246,19 @@
                 <!--Grid column-->
 
                 <!--Grid column-->
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="col-md mb-4 mb-md-0">
                     <h5 class="text-start">Tentang Wikrama</h5>
-
                     <ul class="list-unstyled mb-0 text-start">
-                        <li>
-                            <a href="#!" class="text-white">Sejarah</a>
+                        <li class="border-bottom pt-2">
+                            <a href="#!" class="text-white py-2">Sejarah</a>
                         </li>
-                        <li>
-                            <a href="#!" class="text-white">Peraturan Sekolah</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Rencana Strategy</a>
-                        </li>
-                        <li>
+                        <li class="border-bottom pt-2">
                             <a href="#!" class="text-white">Yayasan</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Structur Organisasi</a>
-                        </li>
-                        <li>
+                        </li>             
+                        <li class="border-bottom pt-2">
                             <a href="#!" class="text-white">Cabang</a>
                         </li>
-                        <li>
-                            <a href="#!" class="text-white">Penghargaan</a>
-                        </li>
-                        <li>
+                        <li class="border-bottom pt-2">
                             <a href="#!" class="text-white">Kerjasama</a>
                         </li>
                     </ul>
@@ -280,30 +266,41 @@
                 <!--Grid column-->
 
                 <!--Grid column-->
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-start">Other</h5>
+                <div class="col-md mb-4 mb-md-0">
+                    <h5 class="text-start">Quick Links</h5>
 
                     <ul class="list-unstyled mb-0 text-start">
-                        <li>
+                        <li class="pt-2 border-bottom">
                             <a href="#!" class="text-white">Info Lowongan</a>
                         </li>
                     </ul>
                 </div>
                 <!--Grid column-->
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <div class="col-md mb-4 mb-md-0">
                     <h5 class="text-start mb-3">Pesan</h5>
 
                     <ul class="list-unstyled text-start">
-                        <form>
+                        <form wire:submit.prevent="store">
                             <div class="mb-1">
-                                <input type="text" class="form-control text-sm" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Name">
+                                <input type="text" class="form-control text-sm @error('name') is-invalid @enderror"
+                                    id="exampleInputEmail1" wire:model="name" placeholder="Name">
+                                @error('name')
+                                    <span class="error text-red-600">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="mb-1">
-                                <input type="email" class="form-control text-sm" id="exampleInputPassword1" placeholder="Email">
+                                <input type="email" class="form-control text-sm @error('email') is-invalid @enderror" wire:model="email"
+                                    placeholder="Email">
+                                @error('email')
+                                    <span class="error text-red-600">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="mb-1">
-                                <textarea type="text" class="form-control text-sm" id="exampleInputPassword1" placeholder="Pesan"></textarea>
+                                <textarea type="text" class="form-control text-sm @error('pesan') is-invalid @enderror" wire:model="pesan"
+                                    placeholder="Pesan"></textarea>
+                                @error('pesan')
+                                    <span class="error text-red-600">{{ $message }}</span>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary">Kirim</button>
                         </form>
@@ -321,11 +318,174 @@
             <a class="text-white" href="#">SMK Wikrama Bogor</a>
         </div>
         <!-- Copyright -->
+    </footer> --}}
+    <!-- Footer -->
+    <footer class="jurusan page-footer font-small">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,128L60,154.7C120,181,240,235,360,256C480,277,600,267,720,229.3C840,192,960,128,1080,117.3C1200,107,1320,149,1380,170.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+            </path>
+        </svg>
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Footer links -->
+            <div class="row text-center text-md-left  pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 ">
+                    <div class="text-start pb-4">
+                        <img src="{{ asset('logo/wikrama.png') }}" alt="" width="30" height="24"
+                            class="align-center d-inline-block">
+                        <span class="text-lg font-bold text-white">SMK WIKRAMA</span>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100  d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 text-start">
+                    <h6 class=" mb-4 font-bold text-white">Tentang Wikrama</h6>
+                    <p>
+                        <a href="{{ route('frontend.sejarah') }}" class="text-white border-bottom">Sejarah</a>
+                    </p>
+                    <p>
+                        <a href="{{ route('discover-wikrama.yayasan') }}" class="text-white">Yayasan</a>
+                    </p>
+                    <p>
+                        <a href="{{ route('discover-wikrama.school-alliance') }}" class="text-white">Cabang</a>
+                    </p>
+                    <p>
+                        <a href="{{ route('discover-wikrama.kerjasama') }}" class="text-white">Kerjasama</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 text-start ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold text-white">Quick Links</h6>
+                    <p>
+                        <a href="{{ route('frontend.lowongankerja') }}" class="text-white">Lowongan Kerja</a>
+                    </p>
+                    <p>
+                        <a href="{{ route('frontend.teaching-factory') }}" class="text-white">Teaching Factory</a>
+                    </p>
+                    <p>
+                        <a href="http://perpus.smkwikrama.sch.id/" class="text-white">Perpustakaan Wikrama</a>
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto text-start ">
+                    <h6 class=" mb-4 font-weight-bold text-lg text-white">Contact</h6>
+                    <p class="text-white">
+                        <i class="fas fa-home mr-3 text-white"></i> Jl. Raya Wangun
+                        Kelurahan Sindangsari
+                        Bogor Timur 16720
+                    </p>
+                    <p class="text-white">
+                        <i class="fas fa-envelope mr-3 text-white"></i> prohumasi@smkwikrama.net
+                    </p>
+                    <p class="text-white">
+                        <i class="fas fa-phone mr-3 text-white"></i> 0251-8242411 / 082221718035
+                    </p>
+                    <p class="text-white">
+                        <i class="fas fa-print mr-3 text-white"></i> (Whatsapp)
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Footer links -->
+
+            <hr>
+
+            <!-- Grid row -->
+            <div class="row justify-content-between">
+
+                <!-- Grid column -->
+                <div class="col-md text-start">
+                    <p>© 2021 Copyright:
+                        <a href="">
+                            <strong class="text-white">SMK Wikrama Bogor</strong>
+                        </a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md ml-lg-0">
+                    <!-- Social buttons -->
+                    <div class="text-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
     </footer>
     <!-- Footer -->
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{{ asset('js/aos.js') }}"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.owl-carousel').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true,
+                loop: true,
+                margin: 12,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        })
+
+    </script>
+    <script>
+        AOS.init();
+
+    </script>
 </body>
 
 </html>

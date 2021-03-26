@@ -44,7 +44,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </section>
-    <section class="container">
+    <div class="container" data-aos="fade-right" data-aos-duration="3000">
         <div class="row justify-content-center pt-md-20 pt-5 ">
             <div class="col-md-3">
                 <img src="{{ asset('photo/profil.png') }}" class=" transform scale-100 hover:scale-125 duration-1000"
@@ -57,12 +57,12 @@
                     dan memimpin SMK
                     Wikrama Bogor selama 18 tahun dan saat ini menjadi Ketua Perguruan Wikrama Indonesia</p>
                 <div class="px-3 px-md-0">
-                    <a href=""
+                    <a href="{{ route('frontend.sejarah') }}"
                         class="bg-yellow-600 rounded-full py-2 px-4 text-white font-bold hover:opacity-50">SEJARAH</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     {{-- end profil --}}
     <section class="jurusan" id="jurusan">
@@ -77,101 +77,110 @@
                     <h2 class="font-bold text-white pb-5">PROGRAM KEAHLIAN</h2>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md pb-4 pb-md-0">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('photo/otkp.png') }}" width="100"
-                                class="transform scale-100 hover:scale-125 duration-1000" alt="">
+            <section class="mt-10">
+                <div class="owl-carousel owl-theme px-3 px-md-0">
+                    <div class="item pt-5 ">
+                        <div class="card shadow" style="border: none">
+                            <div class="card-body jurusan">
+                                <img src="{{ asset('photo/rpl.png') }}" width="100"
+                                    class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                                <h4 class="text-center font-bold text-lg text-yellow-300">Rekayasa Perangkat Lunak</h4>
+                                <p class="card-text text-center text-sm text-white">Merancang solusi perangkat lunak
+                                    berbasis web,
+                                    desktop dan mobile dalam berbagai skala kompleksitas yang mengintegrasikan persoalan
+                                    ethical, social, legal, security dan ekonomi.</p>
+                                <a href="{{ route('program-keahlian.rpl') }}"><span style="font-size: 1.8em;"><i
+                                            class="fad fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item pt-5 ">
+                        <div class="card shadow" style="border: none">
+                            <div class="card-body jurusan">
+                                <img src="{{ asset('photo/otkp.png') }}" width="100"
+                                    class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                                <h4 class="text-center font-bold text-lg text-yellow-300">Otomitasi & Tata Kelola
+                                    Pengkantoran</h4>
+                                <p class="card-text text-center text-sm text-white">Mengetik cepat dengan teknik 10 jari
+                                    dengan
+                                    rata-rata kecepatan 250 EPM 98%, mengelola dokumen dan arsip kantor, menangani
+                                    telepon,
+                                    mengelola keuangan dan mampu menangani tamu</p>
+                                <a href="{{ route('program-keahlian.otkp') }}"><span style="font-size: 1.8em;"><i
+                                            class="fad fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item pt-5 ">
+                        <div class="card shadow" style="border: none">
+                            <div class="card-body jurusan">
+                                <img src="{{ asset('photo/tkj.png') }}" width="100"
+                                    class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                                <h4 class="text-center font-bold text-lg text-yellow-300">Teknik Komputer & Jaringan
+                                </h4>
+                                <p class="card-text text-center text-sm text-white">Peserta didik mampu menjadi seorang
+                                    teknisi
+                                    jaringan, administrasi jaringan, network engineer dan menguasai komunikasi.
+                                    Menginstal
+                                    perangkat jaringan lokal (Local Area Network)</p>
+                                <a href="{{ route('program-keahlian.tkj') }}"><span style="font-size: 1.8em;"><i
+                                            class="fad fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item pt-5 ">
+                        <div class="card shadow" style="border: none">
+                            <div class="card-body jurusan">
+                                <img src="{{ asset('photo/mmd.png') }}" width="100"
+                                    class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                                <h4 class="text-center font-bold text-lg text-yellow-300">Multimedia</h4>
+                                <p class="card-text text-center text-sm text-white">kompetensi keahlian Multimedia
+                                    menjawab tantangan
+                                    perkembangan komunikasi visual, desain grafis dan multimedia</p>
+                                <a href="{{ route('program-keahlian.mmd') }}"><span style="font-size: 1.8em;"><i
+                                            class="fad fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item pt-5 ">
+                        <div class="card shadow" style="border: none">
+                            <div class="card-body jurusan">
+                                <img src="{{ asset('photo/bdp.png') }}" width="100"
+                                    class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                                <h4 class="text-center font-bold text-lg text-yellow-300">Bisnis Daring & Pemasaran</h4>
+                                <p class="card-text text-center text-sm text-white">Kompetensi keahlian Bisnis Daring dan Pemasaran memiliki kompetensi yang mirip dengan program Multimedia dan Perkantoran</p>
+                                <a href="{{ route('program-keahlian.bdp') }}"><span style="font-size: 1.8em;"><i
+                                            class="fad fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item pt-5 ">
+                        <div class="card shadow" style="border: none">
+                            <div class="card-body jurusan">
+                                <img src="{{ asset('photo/tbg.png') }}" width="100"
+                                    class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                                <h4 class="text-center font-bold text-lg text-yellow-300">Tata Boga</h4>
+                                <p class="card-text text-center text-sm text-white">Pengetahuan pariwisata, pengetahuan
+                                    mengenai bahan,
+                                    pengolahan, penyajian dan penyimpanan bahan sesuai dengan jenis bahan makanannya</p>
+                                <a href="{{ route('program-keahlian.tbg') }}"><span style="font-size: 1.8em;"><i
+                                            class="fad fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {{-- <div class="col-4">
+                            
                         </div>
                         <div class="col">
-                            <h4 class="font-bold text-yellow-300">Otomitasi & Tata Kelola Pengkantoran</h4>
-                            <p class="text-sm font-bold text-white">Mengetik cepat dengan teknik 10 jari dengan
-                                rata-rata kecepatan 250 EPM 98%, mengelola dokumen dan arsip kantor, menangani telepon,
-                                mengelola keuangan dan mampu menangani tamu</p>
+                            <h4 class="font-bold text-yellow-300"></h4>
+                            <p class="text-sm font-bold text-white">.</p>
                             <a href="" class="text-sm font-bold text-yellow-400">VIEW MORE</a>
                         </div>
                     </div>
                 </div>
-                {{-- -------------------------- --}}
-                <div class="col-md pb-4 pb-md-0">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('photo/rpl.png') }}" width="100"
-                                class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                        </div>
-                        <div class="col">
-                            <h4 class="font-bold text-yellow-300">Rekayasa Perangkat Lunak</h4>
-                            <p class="text-sm font-bold text-white">Merancang solusi perangkat lunak berbasis web,
-                                desktop dan mobile dalam berbagai skala kompleksitas yang mengintegrasikan persoalan
-                                ethical, social, legal, security dan ekonomi.</p>
-                            <a href="" class="text-sm font-bold text-yellow-400">VIEW MORE</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md pb-4 pb-md-0">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('photo/tkj.png') }}" width="100"
-                                class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                        </div>
-                        <div class="col">
-                            <h4 class="font-bold text-yellow-300">Teknik Komputer & Jaringan</h4>
-                            <p class="text-sm font-bold text-white">Peserta didik mampu menjadi seorang teknisi
-                                jaringan, administrasi jaringan, network engineer dan menguasai komunikasi. Menginstal
-                                perangkat jaringan lokal (Local Area Network),</p>
-                            <a href="" class="text-sm font-bold text-yellow-400">VIEW MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center pt-0 pt-md-4 ">
-                <div class="col-md pb-4 pb-md-0">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('photo/mmd.png') }}" width="100"
-                                class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                        </div>
-                        <div class="col">
-                            <h4 class="font-bold text-yellow-300">Multimedia</h4>
-                            <p class="text-sm font-bold text-white">kompetensi keahlian Multimedia menjawab tantangan
-                                perkembangan komunikasi visual, desain grafis dan multimedia.</p>
-                            <a href="" class="text-sm font-bold text-yellow-400">VIEW MORE</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- -------------------------- --}}
-                <div class="col-md pb-4 pb-md-0">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('photo/bdp.png') }}" width="100"
-                                class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                        </div>
-                        <div class="col">
-                            <h4 class="font-bold text-yellow-300">Bisnis Daring & Pemasaran</h4>
-                            <p class="text-sm font-bold text-white">Kompetensi keahlian Bisnis Daring dan Pemasaran
-                                memiliki kompetensi yang mirip dengan program Multimedia dan Perkantoran.</p>
-                            <a href="" class="text-sm font-bold text-yellow-400 ">VIEW MORE</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md pb-4 pb-md-0">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{ asset('photo/tbg.png') }}" width="100"
-                                class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                        </div>
-                        <div class="col">
-                            <h4 class="font-bold text-yellow-300">Tata Boga</h4>
-                            <p class="text-sm font-bold text-white">Pengetahuan pariwisata, pengetahuan mengenai bahan,
-                                pengolahan, penyajian dan penyimpanan bahan sesuai dengan jenis bahan makanannya.</p>
-                            <a href="" class="text-sm font-bold text-yellow-400">VIEW MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -187,26 +196,40 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-8" data-aos="zoom-in" data-aos-duration="2000">
                     <img src="{{ asset('photo/gedung.png') }}"
-                        class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                        class="transform scale-100 hover:scale-105 duration-1000" alt="">
                     <P class="text-center">Gedung Utama SMK Wikrama Bogor</P>
                 </div>
                 <div class="col-md">
-                    <img src="{{ asset('photo/gedung2.png') }}"
-                        class="transform scale-100 hover:scale-125 duration-1000 text-center" alt="">
-                    <P class="text-center">Lab Bisnis Daring</P>
-                    <img src="{{ asset('photo/gedungmmd.png') }}"
-                        class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                    <P class="text-center">Lab Multimedia</P>
+                    <div data-aos="zoom-in-right" data-aos-duration="2000">
+                        <img src="{{ asset('photo/gedung2.png') }}"
+                            class="transform scale-100 hover:scale-125 duration-1000 text-center" alt="">
+                        <P class="text-center">Lab Bisnis Daring</P>
+                    </div>
+                    <div data-aos="zoom-in-left" data-aos-duration="2000">
+                        <img src="{{ asset('photo/gedungmmd.png') }}"
+                            class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                        <P class="text-center">Lab Multimedia</P>
+                    </div>
                 </div>
                 <div class="col-md">
-                    <img src="{{ asset('photo/gedung3.png') }}"
-                        class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                    <P class="text-center">Perpustakaan</P>
-                    <img src="{{ asset('photo/gedung4.png') }}"
-                        class="transform scale-100 hover:scale-125 duration-1000" alt="">
-                    <P class="text-center">Lab Rekayasa Perangkat Lunak</P>
+                    <div data-aos="zoom-in-right" data-aos-duration="2000">
+                        <img src="{{ asset('photo/gedung3.png') }}"
+                            class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                        <P class="text-center ">Perpustakaan</P>
+                    </div>
+                    <div data-aos="zoom-in-left" data-aos-duration="2000">
+                        <img src="{{ asset('photo/gedung4.png') }}"
+                            class="transform scale-100 hover:scale-125 duration-1000" alt="">
+                        <P class="text-center">Lab Rekayasa Perangkat Lunak</P>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col py-2">
+                        <a href="{{ route('campus.fasilitas') }}"
+                            class="font-bold text-sm text-white py-1 px-2 rounded-full bg-yellow-500">View more</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,28 +241,22 @@
                 d="M0,0L48,26.7C96,53,192,107,288,154.7C384,203,480,245,576,266.7C672,288,768,288,864,245.3C960,203,1056,117,1152,74.7C1248,32,1344,32,1392,32L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
             </path>
         </svg>
-        <!-- Grid container -->
-        <div class="container">
-            <!-- Section: Iframe -->
-            <div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-3 my-auto">
-                        <div>
-                            <h1 class="text-start font-bold text-white">Video Pilihan</h1>
-                            <p class="text-start text-lg ">7 Jurusan SMK Wikrama Bogor</p>
-                        </div>
+        <div class="container mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-3 my-auto">
+                    <div data-aos="fade-down" data-aos-duration="2000">
+                        <h1 class="text-start font-bold text-white">Video Pilihan</h1>
+                        <p class="text-start text-lg ">7 Jurusan SMK Wikrama Bogor</p>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="ratio ratio-16x9">
-                            <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/BeIHXmayzIA"
-                                title="YouTube video" allowfullscreen></iframe>
-                        </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/BeIHXmayzIA"
+                            title="YouTube video" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-            <!-- Section: Iframe -->
         </div>
-        <!-- Grid container -->
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#d97706" fill-opacity="1"
@@ -250,10 +267,10 @@
         <div class="container mx-auto py-4">
             <div class="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 rounded-3xl shadow-xl ">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md">
+                    <div class="col-md" data-aos="fade-right" data-aos-duration="2000">
                         <img src="{{ asset('photo/ppdb.png') }}" class="rounded-l-3xl ">
                     </div>
-                    <div class="col-md py-4 py-md-0 px-4 px-md-0">
+                    <div class="col-md py-4 py-md-0 px-4 px-md-0" data-aos="fade-left" data-aos-duration="2000">
                         <h6 class="text-yellow-500 opacity-90">Join With Us</h6>
                         <h1 class="pb-2 text-white font-bold">PPDB 2021 - 2022</h1>
                         <p class="text-white pr-11">Berkomitmen dalam mencetak Generasi terpelajar, religius dan
@@ -274,32 +291,53 @@
                 <div class="col-md-4">
                     <h1>Events & News</h1>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 pt-2">
                     <a href="{{ route('campus.berita') }}"
-                        class=" py-2 px-4 text-lg font-bold rounded-full text-white bg-yellow-600">View More</a>
+                        class=" py-2 px-4 text-lg font-bold rounded-full text-white bg-yellow-600" style="text-decoration: none;" >View More</a>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container pt-4">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="container pt-4 mb-5 mb-md-5">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
                 @foreach ($posts as $post)
-                <div class="col">
-                    <div class="card h-100">
-                        <img width="100px" src="{{ url('storage/photo/'. $post->gambar) }}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $post->judul }}</h5>
-                            <p class="card-text">{{ $post->content }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                    <div class="col" data-aos="flip-left" data-aos-duration="3000">
+                        <div class="card h-96">
+                            <img width="300px" src="{{ url('storage/photo/' . $post->gambar) }}">
+                            <div class="card-body">
+                                <h2 class="card-title font-bold text-md">{{ $post->judul }}</h2>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted" type="date">{{ $post->updated_at }}</small>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section>
-
+    <section class="mt-5 mt-md-5">
+         <div class="container ">
+            <div class="row text-center">
+                <div class="col">
+                    <h2><a href="{{ route('discover-wikrama.testimoni-alumni')}}" class="font-bold text-yellow-500 pb-2" style="text-decoration: none;">Testimoni Alumni</a></h2>
+                </div>
+            </div>
+         </div>
+        <div class="owl-carousel owl-theme px-3 px-md-0">
+            @foreach ($items as $post)
+                <div class="item pt-3">
+                    <div class="card h-100 " style="border: none">
+                        <div class="card-body shadow">
+                            <h4 class="text-center">{{ $post->nama }}</h4>
+                            <h6 class="text-center">{{ $post->jurusan }}</h6>
+                            <h6 class="text-center">{{ $post->angkatan }}</h6>
+                            <p class="card-text"><i class="fas fa-quote-left"></i> {{ $post->testimoni }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
 </div>

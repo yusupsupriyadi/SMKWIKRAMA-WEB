@@ -21,6 +21,7 @@ class Create extends Component
             'email' => 'required',
             'website' => 'required',
             'no_telp' => 'required',
+            'gambar' => 'required',
         ]);
 
         $post = SchoolAlliance::create([

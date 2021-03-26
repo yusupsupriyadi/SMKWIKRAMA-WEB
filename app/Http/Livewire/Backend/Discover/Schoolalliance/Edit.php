@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class Edit extends Component
 {
-    public $postId, $name, $tanggal_berdiri, $yayasan, $kepala_sekolah, $alamat, $email, $website, $no_telp;
+    public $postId, $name, $tanggal_berdiri, $yayasan, $kepala_sekolah, $alamat, $email, $website, $no_telp, $gambar;
 
     public function mount($id)
     {
@@ -15,6 +15,7 @@ class Edit extends Component
         if ($post) {
             $this->postId = $post->id;
             $this->name = $post->name;
+            $this->gambar = $post->gambar;
             $this->tanggal_berdiri = $post->tanggal_berdiri;
             $this->yayasan = $post->yayasan;
             $this->kepala_sekolah = $post->kepala_sekolah;
@@ -38,6 +39,7 @@ class Edit extends Component
                 'email' => $this->email,
                 'website' => $this->website,
                 'no_telp' => $this->no_telp,
+                'gambar' => $this->gambar,
             ]);
             session()->flash('success', 'Data Berhasil Diupdate');
             return redirect()->route('schoolalliance.index');

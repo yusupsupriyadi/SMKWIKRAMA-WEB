@@ -23,7 +23,7 @@ class Create extends Component
             'judul' => $this->judul,
             'content' => $this->content,
         ]);
-        if (!empty($this->gambar)){
+        if (!empty($this->gambar)) {
             $this->gambar->store('public/photo');
         }
         session()->flash('success', 'Data Berhasil Di Simpan');

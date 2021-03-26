@@ -67,6 +67,13 @@
                         <span class="error text-red-600">{{ $message }}</span>
                         @enderror
                     </div>
+                    <div class="form-group">
+                        <label>IMAGE URL</label>
+                        <input class="form-control @error('no_telp') is-invalid @enderror" type="text" wire:model="gambar" placeholder="Image Url">
+                        @error('gambar')
+                        <span class="error text-red-600">{{ $message }}</span>
+                        @enderror
+                    </div>
                     
                     <button type="submit" class="btn btn-success ">Update</button>
                 </form>

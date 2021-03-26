@@ -29,6 +29,7 @@
                         <th scope="col">EMAIL</th>
                         <th scope="col">WEBSITE</th>
                         <th scope="col">NO TELPHONE</th>
+                        <th scope="col">IMAGE URL</th>
                         <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -43,6 +44,7 @@
                                 <td>{{ $post->email }}</td>
                                 <td>{{ $post->website }}</td>
                                 <td>{{ $post->no_telp }}</td>
+                                <td>{{ $post->gambar }}</td>
                                 <td>
                                     <a href="{{ route('schoolalliance.edit', $post->id) }}" class="btn btn-warning">Edit</a>
                                     <button wire:click="destroy({{ $post->id }})" class="btn btn-danger">Delete</button>
